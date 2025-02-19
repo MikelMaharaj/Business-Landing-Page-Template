@@ -5,7 +5,7 @@ import CargoPattern from "../ui/patterns/CargoPattern";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-black">
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-b from-gray-900 to-black">
       <CargoPattern />
 
       <div className="container mx-auto px-6">
