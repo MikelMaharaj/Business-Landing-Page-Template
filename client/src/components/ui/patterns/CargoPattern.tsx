@@ -4,12 +4,12 @@ export default function CargoPattern() {
   return (
     <div className="absolute inset-0 -z-10 overflow-hidden">
       {/* Dark gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/95 mix-blend-multiply" />
-      
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/90 mix-blend-multiply" />
+
       {/* Cargo ship silhouette */}
       <motion.svg
         initial={{ x: -100, opacity: 0 }}
-        animate={{ x: 0, opacity: 0.15 }}
+        animate={{ x: 0, opacity: 0.3 }}
         transition={{ duration: 1, delay: 0.5 }}
         className="absolute bottom-0 left-0 w-full h-64 text-gray-500"
         viewBox="0 0 800 200"
@@ -39,7 +39,7 @@ export default function CargoPattern() {
 
       {/* Container grid pattern */}
       <svg
-        className="absolute inset-0 h-full w-full stroke-gray-800/20"
+        className="absolute inset-0 h-full w-full stroke-gray-800/40"
         aria-hidden="true"
       >
         <defs>
