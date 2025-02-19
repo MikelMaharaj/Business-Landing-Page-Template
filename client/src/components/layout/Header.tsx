@@ -33,7 +33,7 @@ export default function Header() {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link href="/">
           <span className="text-2xl font-bold text-white cursor-pointer">
-            SaaS<span className="text-primary">Hub</span>
+            Prime<span className="text-primary">Customs</span>
           </span>
         </Link>
 
