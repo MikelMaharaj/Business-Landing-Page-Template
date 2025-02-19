@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import GridPattern from "../ui/patterns/GridPattern";
+import CargoPattern from "../ui/patterns/CargoPattern";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-black">
-      <GridPattern />
+      <CargoPattern />
 
       <div className="container mx-auto px-6">
         <motion.div
@@ -18,7 +18,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="inline-block px-4 py-1.5 mb-6 text-sm font-medium bg-gray-800 text-gray-200 rounded-full"
+            className="inline-block px-4 py-1.5 mb-6 text-sm font-medium bg-gray-800/80 text-gray-200 rounded-full backdrop-blur-sm"
           >
             Prime Customes Brokerage Limited
           </motion.span>
@@ -36,7 +36,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-400 mb-10"
+            className="text-lg md:text-xl text-gray-300 mb-10"
           >
             Expert customs clearance, compliance management, and trade solutions to help your business navigate global commerce with confidence.
           </motion.p>
