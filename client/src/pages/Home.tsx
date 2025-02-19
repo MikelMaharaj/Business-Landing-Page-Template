@@ -26,23 +26,23 @@ export default function Home() {
           case 'blog': scrollToSection(blogRef); break;
         }
       }} />
-      <main className="snap-y snap-mandatory h-screen overflow-y-auto">
-        <div className="snap-start">
+      <main className="h-screen overflow-y-auto scroll-smooth">
+        <div>
           <Hero />
         </div>
-        <div className="snap-start">
+        <div>
           <Features />
         </div>
-        <div className="snap-start">
+        <div>
           <ProductShowcase />
         </div>
-        <div ref={resourcesRef} className="snap-start">
+        <div ref={resourcesRef}>
           <Resources />
         </div>
-        <div ref={pricingRef} className="snap-start">
+        <div ref={pricingRef}>
           <Pricing />
         </div>
-        <div ref={blogRef} className="snap-start">
+        <div ref={blogRef}>
           <Blog />
         </div>
       </main>
