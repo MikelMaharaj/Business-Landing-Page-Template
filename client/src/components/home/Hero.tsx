@@ -5,10 +5,16 @@ import CargoPattern from "../ui/patterns/CargoPattern";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-b from-gray-900 to-black">
-      <CargoPattern />
+    <section 
+      className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-cover bg-center"
+      style={{
+        backgroundImage: 'url("/public/iStock-510801222-scaled.jpg")'
+      }}
+    >
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/50" />
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -21,7 +27,7 @@ export default function Hero() {
             transition={{ delay: 0.2 }}
             className="inline-block px-4 py-1.5 mb-6 text-sm font-medium bg-gray-800/80 text-gray-200 rounded-full backdrop-blur-sm"
           >
-            Prime Customes Brokerage Limited
+            Prime Customs Brokerage Limited
           </motion.span>
 
           <motion.h1
