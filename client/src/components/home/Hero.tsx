@@ -8,12 +8,9 @@ export default function Hero() {
     <section 
       className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-cover bg-center"
       style={{
-        backgroundImage: 'url("/public/iStock-510801222-scaled.jpg")'
+        backgroundImage: 'url("/iStock-510801222-scaled.jpg")'
       }}
     >
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/50" />
-
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
