@@ -1,19 +1,12 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import CargoPattern from "../ui/patterns/CargoPattern";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1494412651409-8963ce7935a7?q=80&w=2070')",
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/70 to-black/90 backdrop-blur-[2px]" />
-      </div>
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-b from-gray-900 to-black">
+      <CargoPattern />
 
       <div className="container mx-auto px-6">
         <motion.div
@@ -28,7 +21,7 @@ export default function Hero() {
             transition={{ delay: 0.2 }}
             className="inline-block px-4 py-1.5 mb-6 text-sm font-medium bg-gray-800/80 text-gray-200 rounded-full backdrop-blur-sm"
           >
-            Prime Customs Brokerage Limited
+            Prime Customes Brokerage Limited
           </motion.span>
 
           <motion.h1

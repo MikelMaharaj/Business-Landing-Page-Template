@@ -2,51 +2,77 @@ import { motion } from "framer-motion";
 
 export default function CargoPattern() {
   return (
-    <div className="absolute inset-0 -z-10">
-      {/* Minimal gradient overlay to ensure visibility */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40" />
+    <div className="absolute inset-0 -z-10 overflow-hidden">
+      {/* Lighter gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60" />
 
-      {/* Simplified cargo ship */}
+      {/* Cargo ship silhouette */}
       <motion.svg
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="absolute bottom-0 left-0 w-full h-[70vh]"
-        viewBox="0 0 1000 600"
-        preserveAspectRatio="xMidYMax slice"
+        initial={{ x: -200, opacity: 0 }}
+        animate={{ x: 0, opacity: 0.8 }}
+        transition={{ duration: 1.5, delay: 0.5 }}
+        className="absolute bottom-0 left-0 w-full h-96 text-gray-300"
+        viewBox="0 0 1200 400"
+        preserveAspectRatio="xMidYMax meet"
       >
-        {/* Main ship body */}
+        {/* Ship hull */}
         <path
-          d="M100,400 L300,400 L350,350 L800,350 L850,400 L900,400 L900,600 L100,600 Z"
-          className="fill-gray-400/80"
+          d="M50,300 L200,300 L250,250 L900,250 L950,300 L1150,300 L1150,400 L50,400 Z"
+          fill="currentColor"
+          opacity="0.9"
         />
 
-        {/* Containers - simplified but visible */}
-        <g>
-          {Array.from({ length: 3 }).map((_, row) =>
-            Array.from({ length: 5 }).map((_, col) => (
+        {/* Ship cabin */}
+        <path
+          d="M800,150 L900,150 L900,250 L800,250 Z"
+          fill="currentColor"
+          opacity="0.85"
+        />
+
+        {/* Container stacks - made larger and more visible */}
+        <g transform="translate(300, 50)">
+          {[0, 1, 2].map((row) =>
+            [0, 1, 2, 3, 4].map((col) => (
               <rect
-                key={`container-${row}-${col}`}
-                x={350 + col * 80}
-                y={200 + row * 50}
+                key={`${row}-${col}`}
+                x={col * 80}
+                y={row * 40}
                 width="70"
-                height="40"
-                className="fill-gray-300/90"
-                rx="4"
+                height="35"
+                fill="currentColor"
+                opacity="0.95"
+                rx="2"
               />
             ))
           )}
         </g>
 
-        {/* Bridge/control tower */}
-        <rect
-          x="750"
-          y="150"
-          width="80"
-          height="200"
-          className="fill-gray-400/90"
+        {/* Crane structure */}
+        <path
+          d="M700,50 L750,50 L750,150 L700,150 Z M720,30 L730,30 L730,250 L720,250 Z"
+          fill="currentColor"
+          opacity="0.85"
         />
       </motion.svg>
+
+      {/* Container grid pattern - made more visible */}
+      <svg
+        className="absolute inset-0 h-full w-full stroke-gray-500/20"
+        aria-hidden="true"
+      >
+        <defs>
+          <pattern
+            id="cargo-grid"
+            width="60"
+            height="60"
+            patternUnits="userSpaceOnUse"
+          >
+            <rect width="60" height="60" fill="none" strokeWidth="1.5" />
+            <rect width="30" height="30" fill="none" strokeWidth="1.5" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#cargo-grid)" />
+      </svg>
     </div>
   );
 }
