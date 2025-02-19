@@ -22,7 +22,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="inline-block px-4 py-1.5 mb-6 text-sm font-medium bg-white/80 text-gray-900 rounded-full backdrop-blur-sm"
+            className="inline-block px-4 py-1.5 mb-6 text-sm font-medium bg-gray-800/80 text-gray-200 rounded-full backdrop-blur-sm"
           >
             Prime Customs Brokerage Limited
           </motion.span>
@@ -31,7 +31,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight"
+            className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
           >
             Streamline Your International Trade Operations
           </motion.h1>
@@ -40,7 +40,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-700 mb-10"
+            className="text-lg md:text-xl text-gray-300 mb-10"
           >
             Expert customs clearance, compliance management, and trade solutions to help your business navigate global commerce with confidence.
           </motion.p>
