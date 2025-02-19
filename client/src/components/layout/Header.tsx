@@ -3,7 +3,11 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-export default function Header() {
+interface HeaderProps {
+  onNavigate: (section: string) => void;
+}
+
+export default function Header({ onNavigate }: HeaderProps) {
   const { scrollY } = useScroll();
   const backgroundColor = useTransform(
     scrollY,
@@ -38,27 +42,24 @@ export default function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="/resources">
-            <span className={`cursor-pointer transition-colors ${
-              isActive("/resources") ? "text-white" : "text-gray-300 hover:text-white"
-            }`}>
-              Resources
-            </span>
-          </Link>
-          <Link href="/pricing">
-            <span className={`cursor-pointer transition-colors ${
-              isActive("/pricing") ? "text-white" : "text-gray-300 hover:text-white"
-            }`}>
-              Pricing
-            </span>
-          </Link>
-          <Link href="/blog">
-            <span className={`cursor-pointer transition-colors ${
-              isActive("/blog") ? "text-white" : "text-gray-300 hover:text-white"
-            }`}>
-              Blog
-            </span>
-          </Link>
+          <button
+            onClick={() => onNavigate('resources')}
+            className="cursor-pointer transition-colors text-gray-300 hover:text-white"
+          >
+            Resources
+          </button>
+          <button
+            onClick={() => onNavigate('pricing')}
+            className="cursor-pointer transition-colors text-gray-300 hover:text-white"
+          >
+            Pricing
+          </button>
+          <button
+            onClick={() => onNavigate('blog')}
+            className="cursor-pointer transition-colors text-gray-300 hover:text-white"
+          >
+            Blog
+          </button>
         </nav>
 
         <Button variant="secondary" className="bg-white text-black hover:bg-gray-100">
