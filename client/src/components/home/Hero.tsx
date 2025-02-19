@@ -6,10 +6,7 @@ import CargoPattern from "../ui/patterns/CargoPattern";
 export default function Hero() {
   return (
     <section 
-      className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-cover bg-center"
-      style={{
-        backgroundImage: 'url("/attached_assets/iStock-510801222-scaled.jpg")'
-      }}
+      className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-blue-600"
     >
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
