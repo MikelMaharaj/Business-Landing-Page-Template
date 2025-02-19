@@ -20,7 +20,7 @@ export default function Hero() {
             transition={{ delay: 0.2 }}
             className="inline-block px-4 py-1.5 mb-6 text-sm font-medium bg-gray-800 text-gray-200 rounded-full"
           >
-            Premier Customs Brokerage Services
+            Prime Customes Brokerage Limited
           </motion.span>
 
           <motion.h1
