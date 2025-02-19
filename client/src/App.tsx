@@ -9,6 +9,7 @@ import Home from "@/pages/Home";
 import Resources from "@/pages/Resources";
 import Pricing from "@/pages/Pricing";
 import Blog from "@/pages/Blog";
+import CargoPattern from "./components/ui/patterns/CargoPattern"; // Added import
 
 function Router() {
   const [location] = useLocation();
@@ -31,7 +32,10 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Router />
+      <div className="relative min-h-screen"> {/*Added div */}
+        <CargoPattern />
+        <Router /> {/* Changed Routes to Router */}
+      </div>
       <Toaster />
     </QueryClientProvider>
   );
